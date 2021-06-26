@@ -28,7 +28,7 @@ client.on("messageReactionAdd", async (messageReaction, user) => {
         let member = messageReaction.message.guild.members.cache.find(
             (member) => member.id === user.id
         );
-        // console.log(`role = ${role}, member = ${member}`);
+        console.log(`role = ${role}, member = ${member}`);
         try {
             if (role && member) {
                 await member.roles.add(role);
