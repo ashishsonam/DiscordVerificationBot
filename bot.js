@@ -6,6 +6,10 @@ const client = new Discord.Client({
     partials: ["MESSAGE", "REACTION"],
 });
 
+const http = require("http").createServer();
+
+http.listen();
+
 client.login(process.env.TOKEN);
 
 client.on("ready", () => {
