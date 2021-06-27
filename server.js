@@ -38,6 +38,7 @@ client.on("ready", () => {
 });
 
 client.on("messageReactionAdd", async (messageReaction, user) => {
+  console.log("here...");
   let applyRole = async () => {
     let role = messageReaction.message.guild.roles.cache.find(
       (role) => role.name.toLocaleLowerCase() === "member"
