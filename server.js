@@ -22,6 +22,11 @@ client.login(process.env.TOKEN);
 
 client.on("ready", () => {
     console.log(`${client.user.tag} has logged in`);
+    client.channels.cache
+        .get(process.env.CHANNEL_ID)
+        .send(
+            "React  :white_check_mark:  to this message to gain access to this server."
+        );
 });
 
 client.on("messageReactionAdd", async (messageReaction, user) => {
